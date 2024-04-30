@@ -55,7 +55,7 @@ public class HelloWorldServer {
     }
 
     // 实现 定义一个实现服务接口的类
-    private class GreeterImpl extends GreeterGrpc.GreeterImplBase {
+    private static class GreeterImpl extends GreeterGrpc.GreeterImplBase {
         @Override
         public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
             HelloReply reply = HelloReply.newBuilder().setMessage(("Hello " + req.getName())).build();
